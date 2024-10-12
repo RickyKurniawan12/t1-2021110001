@@ -72,7 +72,7 @@ class ResourceController extends Controller
      */
     public function show(Product $products)
     {
-        return view('products.show', compact('product'));
+        return view('products.show', compact('products'));
     }
 
     /**
@@ -80,7 +80,7 @@ class ResourceController extends Controller
      */
     public function edit(Product $products)
     {
-        return view('products.edit',compact('product'));
+        return view('products.edit',compact('products'));
     }
 
     /**
@@ -104,7 +104,7 @@ class ResourceController extends Controller
                         'product_image'=> 'image|mimes:jpeg,jpg,png,gif,svg|max:2048',
                     ]);
 
-                    $imagePath = $request->file('prduct_image')->storePublicly('public/image');
+                    $imagePath = $request->file('product_image')->storePublicly('public/image');
 
                     // hapus file existing
                     if($products->product_image){
