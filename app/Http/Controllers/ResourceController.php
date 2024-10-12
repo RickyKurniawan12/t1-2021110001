@@ -36,6 +36,7 @@ class ResourceController extends Controller
     {
         // dump($request->all());
         $validated = $request->validate([
+            'id'=> 'required|numeric',
             'product_name' => 'required',
             'description' => 'required',
             'retail_price' => 'required|numeric',
@@ -54,6 +55,7 @@ class ResourceController extends Controller
         }
 
         Product::create([
+            'id' => $validated ['id'],
             'product_name' => $validated ['product_name'],
             'description' => $validated['description'],
             'retail_price' => $validated['retail_price'],
@@ -87,6 +89,7 @@ class ResourceController extends Controller
     public function update(Request $request, Product $products)
         {
             $validated = $request->validate([
+                'id' => 'required|numeric',
                 'product_name' => 'required',
                 'description' => 'required',
                 'retail_price' => 'required|numeric',
@@ -112,6 +115,7 @@ class ResourceController extends Controller
                 }
         
         $products->update([
+            'id' => $validated ['id'],
             'product_name' => $validated ['product_name'],
             'description' => $validated['description'],
             'retail_price' => $validated['retail_price'],

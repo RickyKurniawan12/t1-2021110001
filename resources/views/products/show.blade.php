@@ -11,6 +11,10 @@
     <table class="table tabble-bordered">
         <tbody>
             <tr>
+                <th scope="row">id</th>
+                <td>{{$products->id}}</td>
+            </tr>
+            <tr>
                 <th scope="row">product_name</th>
                 <td>{{$products->product_name}}</td>
             </tr>
