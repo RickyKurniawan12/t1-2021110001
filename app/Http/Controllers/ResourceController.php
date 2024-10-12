@@ -37,8 +37,8 @@ class ResourceController extends Controller
         // dump($request->all());
         $validated = $request->validate([
             'id'=> 'required|string|max:12',
-            'product_name' => 'required',
-            'description' => 'required',
+            'product_name' => 'required|string|max:255',
+            'description' => 'nullable|string',
             'retail_price' => 'required|numeric',
             'wholesale_price' => 'required|numeric',
             'origin' => 'required|max:2',
@@ -90,8 +90,8 @@ class ResourceController extends Controller
         {
             $validated = $request->validate([
                 'id' => 'required|string|max:12',
-                'product_name' => 'required',
-                'description' => 'required',
+                'product_name' => 'required|string|max:255',
+                'description' => 'required|string',
                 'retail_price' => 'required|numeric',
                 'wholesale_price' => 'required|numeric',
                 'origin' => 'required|max:2',
