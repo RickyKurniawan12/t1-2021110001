@@ -49,7 +49,7 @@
                 <td>{{$products->created_at}}</td>
                 <td>{{$products->updated_at}}</td>
                 <td>
-                    <a href="{{route('products.edit',$products)}}" class="btn btn-primary btn-sm">
+                    <a href="{{route('products.edit', $products)}}" class="btn btn-primary btn-sm">
                         Edit
                     </a>
                     <form action={{route('products.destroy',$products)}} method="POST" class="d-inline-block">

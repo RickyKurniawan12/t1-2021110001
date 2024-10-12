@@ -32,7 +32,7 @@
             </div>
             <div class=" form-group">
                 <label for="description">Description</label>
-                <input type="text" class="form-control" id="description"placeholder="description" name="description" required value="{{old('description')}}">
+                <input type="text" class="form-control" id="description" placeholder="description" name="description" required value="{{old('description')}}">
             </div>
             <div class=" form-group">
                 <label for="retail_price">Retail_price</label>
