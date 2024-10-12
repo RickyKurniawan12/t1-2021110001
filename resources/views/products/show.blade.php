@@ -1,10 +1,10 @@
 @extends('layouts.template')
 
-@section('title',"product: $Products->prouct_name")
+@section('title',"product: $products->product_name")
 
 @section('body')
 
-@if($product->avatar)
+@if($products->product_image)
     <img src="{{$products->product_image_url}}" class="rounded img-thumbnail mx-auto d-block my-3"/>
 @endif
 
